@@ -32,10 +32,67 @@ public class MainProgram {
         else if (studentID == 1810553) hw_1810553();
 	else if (studentID == 1810374) hw_1810374();
         else if (studentID == 1810448) hw_1810448();
-        else
+	else if (studentID == 1810859) hw_1810859();
+	else
             System.out.println("To be developed...\n");
     }
+    private void hw_1810859() {
+	Scanner scan = new Scanner(System.in);
+	int menu_num;
 
+	System.out.println("[Student ID: 1810859]");
+	System.out.println("1. Calaulate factorial");
+	System.out.println("2. Calaulate absolute value");
+
+	System.out.print("Enter menu number: ");
+	menu_num = scan.nextInt();
+
+	if (menu_num == 1){
+		int number_f;
+		System.out.print("Input 1 integer for factorial: ");
+		number_f = scan.nextInt();
+
+		if (number_f < 0){
+			System.out.println("Wrong Input (input 0 or positive integer)");
+		}
+		else {
+			System.out.println("Factorial is " + Factorial_1810859(number_f));
+		}
+	}
+	else if (menu_num == 2){
+		int number_a;
+		System.out.print("Input 1 integer for absolute value");
+		number_a = scan.nextInt();
+
+		System.out.println("Absolute value is " + Absolute_1810859(number_a));
+	}
+	else {
+		System.out.println("Wrong Input (input 1 or 2)");
+	}
+
+    }
+    public int Factorial_1810859(int a){
+	int fac = 1;
+	if (a == 0){
+		return fac;
+	}
+	else {
+		for (int i = a; i >= 1; i--){
+			fac = fac * i;
+		}
+		return fac;
+	}
+    }
+
+    public int Absolute_1810859(int a){
+	if (a >= 0){
+		return a;
+	}
+	else {
+		return -a;
+	}
+    }
+    
     private void hw_1810815() {
     Scanner scanner = new Scanner(System.in);
     int chosenMenu;
@@ -319,7 +376,7 @@ public class MainProgram {
 			System.out.println("Answer :"+result);
 		}
 		else if(menu == 2){
-			Systme.out.print("Enter in order the base value and exponent value(ex.2 3): ");
+			System.out.print("Enter in order the base value and exponent value(ex.2 3): ");
 			a = input.nextInt();
 			b = input.nextInt();
 			result = powerValue(a,b);
