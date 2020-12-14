@@ -30,6 +30,7 @@ public class MainProgram {
 	    else if (studentID == 1810815) hw_1810815();
         else if (studentID == 1810348) hw_1810348();
         else if (studentID == 1810553) hw_1810553();
+	else if (studentID == 1810374) hw_1810374();
         else
             System.out.println("To be developed...\n");
     }
@@ -254,6 +255,46 @@ public class MainProgram {
 	}
 
 
+	public void hw_1810374() {
+		Scanner input = new Scanner(System.in);
+		int menu, result;
+		int a, b;
+		System.out.println("[Student ID: 1810374]");
+		System.out.println("1. Calculate Min");
+		System.out.println("2. Calculate Power");
+		System.out.print("Enter menu number: ");
+		menu = input.nextInt();
+
+		if(menu == 1) {
+			System.out.print("Enter the two values you want to compare(ex.20 30): ");
+
+			a = input.nextInt();
+			b = input.nextInt();
+			result = minValue(a,b);
+			System.out.println("Answer :"+result);
+		}
+		else if(menu == 2){
+			Systme.out.print("Enter in order the base value and exponent value(ex.2 3): ");
+			a = input.nextInt();
+			b = input.nextInt();
+			result = powerValue(a,b);
+			System.out.println("Answer :"+result);
+		}
+
+	}
+
+	public int minValue(int a, int b) {
+		if(a<b)	return a;
+		else	return b;
+	}
+
+	public int powerValue(int a, int b) {
+		int pow = 1;
+		for(int i=b; i>0; i--){
+			pow = pow * a;
+		}
+		return pow;
+	}
     
  
 }
