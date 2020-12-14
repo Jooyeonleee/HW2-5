@@ -29,6 +29,7 @@ public class MainProgram {
         else if(studentID==1810666) hw_1810666();
 	    else if (studentID == 1810815) hw_1810815();
         else if (studentID == 1810348) hw_1810348();
+        else if (studentID == 1810553) hw_1810553();
         else
             System.out.println("To be developed...\n");
     }
@@ -210,6 +211,46 @@ public class MainProgram {
 		if(a>0)	return a;
 		else if (a<0) return a*(-1);
 		else return 0;
+	}
+	
+	public void hw_1810553() {
+		Scanner scan = new Scanner(System.in);
+		int menu=0, a=0, b=0;
+		int result=0;
+		System.out.println("[Student ID: 1810553]");
+		System.out.println("1. Calculate Max");
+		System.out.println("2. Calculate Min");
+		System.out.print("Enter menu number: ");
+		menu = scan.nextInt();
+		
+		if(menu == 1) {
+			System.out.print("Calcuate max of two values, enter 2 integers seperated by space: ");
+			a = scan.nextInt(); b = scan.nextInt();
+			result = max_1810553(a, b);
+			System.out.println("Result: "+result);
+		}else if(menu == 2) {
+			System.out.print("Calcuate min of two values, enter 2 integers seperated by space: ");
+			a = scan.nextInt(); b = scan.nextInt();
+			result = min_1810553(a, b);
+			System.out.println("Result: "+result);
+		}else {
+			System.out.println("Wrong menu number");
+		}
+		System.out.println();
+	}
+	
+	public int max_1810553(int a, int b) {
+		if(a>=b)
+			return a;
+		else 
+			return b;
+	}
+
+	public int min_1810553(int a, int b) {
+		if(a<=b)
+			return a;
+		else 
+			return b;
 	}
 
 
