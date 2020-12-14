@@ -319,7 +319,7 @@ public class MainProgram {
 			System.out.println("Answer :"+result);
 		}
 		else if(menu == 2){
-			Systme.out.print("Enter in order the base value and exponent value(ex.2 3): ");
+			System.out.print("Enter in order the base value and exponent value(ex.2 3): ");
 			a = input.nextInt();
 			b = input.nextInt();
 			result = powerValue(a,b);
